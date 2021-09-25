@@ -1,0 +1,28 @@
+plugins {
+    id 'org.springframework.boot' version '2.5.5-SNAPSHOT'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group 'ru.task-trk.serv'
+version '0.0.1'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://repo.spring.io/milestone' }
+    maven { url 'https://repo.spring.io/snapshot' }
+}
+
+dependencies {
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.5.4'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.0'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.5.4'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.0'
+}
+
+test {
+    useJUnitPlatform()
+}
