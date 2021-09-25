@@ -8,6 +8,6 @@ public class IndexController {
 
     @GetMapping("/")
     public String checkIndex() {
-        return "<h1>Task-trz-serv</h1>\r\n<p>Version: " + getClass().getPackage().getImplementationVersion() + "</p>\r\n";
+        return "<h1>Welcome Task-trz-serv</h1>\r\n<p>Version: " + getClass().getPackage().getImplementationVersion() + "</p>\r\n";
     }
 }
