@@ -1,6 +1,5 @@
 package ru.task_trz.serv.controllers;
 
-import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.web.bind.annotation.*;
@@ -9,8 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 
 @RestController
 public class IndexController {
-
-    static final Logger logger = LogManager.getLogger();
+    private static final Logger log = LogManager.getLogger(IndexController.class);
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     @ResponseBody
@@ -18,7 +16,7 @@ public class IndexController {
         String clientAddress = request.getRemoteAddr();
         String clientUserAgent = request.getHeader("user-agent");
 
-        logger.log(Level.DEBUG, "Incoming message from " + clientAddress + ", browser: " + clientUserAgent);
+        log.debug("Incoming message from " + clientAddress + ", browser: " + clientUserAgent);
 
         String ret = "<h1>Welcome to Task-trz-serv</h1>\r\n";
         ret += "<p>Your address: " + clientAddress + "</p>\r\n";
