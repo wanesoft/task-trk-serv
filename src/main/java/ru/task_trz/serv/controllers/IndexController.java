@@ -18,7 +18,7 @@ public class IndexController {
 
         log.debug("Incoming message from " + clientAddress + ", browser: " + clientUserAgent);
 
-        String ret = "<h1>Welcome to Task-trz-serv!!!</h1>\r\n";
+        String ret = "<h1>Welcome to Task-trz-serv???</h1>\r\n";
         ret += "<p>Your address: " + clientAddress + "</p>\r\n";
         ret += "<p>Your browser: " + clientUserAgent + "</p>\r\n";
         ret += "<br>";
